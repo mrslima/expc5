@@ -1,5 +1,7 @@
 # set SECRET_KEY="your secret key"
 # set DATABASE_URI="postgresql://username:password@host:port/database_name"
+# set FLASK_APP=app
+# set FLASK_ENV=development
 
 import os
 
