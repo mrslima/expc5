@@ -1,0 +1,40 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* background-color: #f9f9f9; */
+    height: 10vh;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 600;
+    color: #6A994E;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #6A994E;
+    cursor: pointer;
+}
+.navigation a {
+    text-decoration: none;
+    color: #6A994E;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #6A994E;
+    color: #fff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <header>
+        <h2 class="logo"><a href="{{ url_for('main.index') }}">EcoTech Recycling</a></h2>
+        <nav class="navigation">
+            <a href="#map_section">Pontos de coleta</a>
+            <a href="#pricing_section">Preços</a>
+            <a href="#about_section">Sobre</a>
+            <a href="{{ url_for('login.login') }}" class="active">Entrar</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer_container">
+            <div class="footer_nav_links">
+                <a href="#hero_section">Início</a>
+                <a href="#map_section">Pontos de coleta</a>
+                <a href="#pricing_section">Preços</a>
+                <a href="#about_section">Sobre</a>
+            </div>
+            <div class="footer_left">
+                <p>© 2024 EchoTech Recycling, LLC.</p>
+            </div>
+            <div class="footer_right">
+                <a href="https://instagram.com"><img src="../static/img/footer/instagram.png" alt="Instagram"></a>
+                <a href="https://web.facebook.com"><img src="../static/img/footer/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/"><img src="../static/img/footer/twitter.png" alt="Twitter"></a>
+                <p>contato@ecr.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

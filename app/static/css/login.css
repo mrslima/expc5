@@ -1,0 +1,138 @@
+body {
+    background-color: #F9F9F9;
+    display: block;
+    overflow-y: hidden;
+}
+
+#form_fundo {
+    background-color: #386641;
+    margin: 10% 30% 35% 30%;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+#form_fundo a {
+    color: white;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.form {
+    padding: 20px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+.form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: #6a994e50;
+    border: none;
+    outline: none;
+    padding: 20px 10px 7.5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    font-style: normal;
+    color: #ffffffb4;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .inputBox input:focus~i,
+.form .inputBox input:valid~i {
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: #fff;
+}
+
+.form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+
+button {
+    width: 15vw;
+    height: 5vh;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #A7C957;
+    color: white;
+    border: none;
+
+}
+
+button:hover {
+    background-color: rgba(106, 153, 78, 0.9);
+    cursor: pointer;
+}
+
+/* Toggle Button */
+.toggle-container {
+    display: flex;
+    border: 3px solid #A7C957;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.toggle-label {
+    padding: 1px 20px;
+    cursor: pointer;
+    background-color: #6a994e50;
+    color: #ffffffb4;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="radio"]:checked + .toggle-label {
+    background-color: #A7C957;
+    color: white;
+}
+
+.toggle-label:first-of-type {
+    border-right: 2px solid #A7C957;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}

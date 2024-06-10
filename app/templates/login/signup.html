@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../../static/css/login.css">
+{% endblock %}
+
+{% block content %}
+<div id="form_fundo">
+    <h1>CADASTRAR</h1>
+    <div class="form">
+        <div class="inputBox">
+            <input type="text" name="nome" id="nome" required> <i>Nome</i>
+        </div>
+
+        <div class="toggle-container">
+            <input type="radio" id="pessoa" name="toggle" value="pessoa" checked>
+            <label for="pessoa" class="toggle-label">Pessoa</label>
+            <input type="radio" id="empresa" name="toggle" value="empresa">
+            <label for="empresa" class="toggle-label">Empresa</label>
+        </div>
+
+        <div class="inputBox" id="cpf_cnpj_container">
+            <input type="text" name="cpf_cnpj" id="cpf_cnpj" required> <i id="cpf_cnpj_label">CPF</i>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" name="email" id="email" required> <i>Email</i>
+        </div>
+
+        <div class="inputBox">
+            <input type="password" name="senha" id="senha" required> <i>Senha</i>
+        </div>
+
+        <div class="inputBox">
+            <input type="password" name="confirmar_senha" id="confirmar_senha" required> <i>Confirmar Senha</i>
+        </div>
+
+        <div class="inputBox">
+            <button type="submit" id="btn_cadastro">Cadastrar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('input[name="toggle"]').forEach((elem) => {
+    elem.addEventListener("change", function(event) {
+        const cpfCnpjLabel = document.getElementById('cpf_cnpj_label');
+        const cpfCnpjInput = document.getElementById('cpf_cnpj');
+        if (event.target.value === "pessoa") {
+            cpfCnpjLabel.textContent = "CPF";
+        } else {
+            cpfCnpjLabel.textContent = "CNPJ";
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../../static/css/login.css">
+{% endblock %}
+
+{% block content %}
+<div id="form_fundo">
+    <h1>LOGIN</h1>
+    <div class="form">
+
+        <div class="inputBox" id="cpf_cnpj_container">
+            <input type="text" name="cpf_cnpj" id="cpf_cnpj" required> <i id="cpf_cnpj_label">CPF</i>
+        </div>
+
+        <div class="inputBox">
+            <input type="password" name="senha" id="senha" required> <i>Senha</i>
+        </div>
+
+        <div class="toggle-container">
+            <input type="radio" id="pessoa" name="toggle" checked>
+            <label for="pessoa" class="toggle-label">Pessoa</label>
+            <input type="radio" id="empresa" name="toggle">
+            <label for="empresa" class="toggle-label">Empresa</label>
+        </div>
+
+        <div class="links">
+            <a href="#">Esqueceu a senha?</a> <a href="{{ url_for('login.signup') }}">Cadastre-se</a>
+        </div>
+
+        <div class="inputBox">
+            <button type="submit" id="btn_login">Entrar</button>
+            <!-- <input type="submit" id="btn_login" value="Entrar"> -->
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('input[name="toggle"]').forEach((elem) => {
+        elem.addEventListener("change", function(event) {
+            const cpfCnpjLabel = document.getElementById('cpf_cnpj_label');
+            const cpfCnpjInput = document.getElementById('cpf_cnpj');
+            if (event.target.value === "pessoa") {
+                cpfCnpjLabel.textContent = "CPF";
+            } else {
+                cpfCnpjLabel.textContent = "CNPJ";
+            }
+        });
+    });
+    </script>
+{% endblock %}

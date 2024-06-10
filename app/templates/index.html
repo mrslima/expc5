@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+
+{% block content %}
+<!-- Seção de Apresentação -->
+<div id="banner">
+    <h1 id="title">Promovemos uma<br>solução prática para o descarte<br>de resíduos eletrônicos, visando<br>um futuro mais limpo e consciente</h1>
+
+</div>
+ 
+
+<!-- Seção de Pontos de Coleta -->
+<div id="map_section">
+    <h2>Encontre pontos de coleta</h2>
+    <div id="map_frame">
+        <!-- <div class="aaa"></div> -->
+        <iframe id="map" src="https://my.atlist.com/map/4245a69c-37c7-4abe-9f1c-f5cf228d6713/?share=true"
+            allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy" frameborder="0"
+            scrolling="no" allowfullscreen id="atlist-embed"></iframe>
+    </div>
+</div>
+
+<!-- Seção de Tabela de Preços -->
+<div id="pricing_section">
+    <h2>Planos e Preços</h2>
+    <div class="pricing_table">
+        <div class="pricing_option">
+            <h3>Experimental</h3>
+            <p class="price">R$0<span>/cnpj</span></p>
+            <ul>
+                <li>Experimente por um mês</li>
+            </ul>
+            <a href="#" class="pricing_button">Escolher</a>
+        </div>
+        <div class="pricing_option">
+            <h3>Mensal</h3>
+            <p class="price">R$1000<span>/mês</span></p>
+            <ul>
+                <li>Suporte 24/7</li>
+            </ul>
+            <a href="#" class="pricing_button">Escolher</a>
+        </div>
+        <div class="pricing_option">
+            <h3>Anual</h3>
+            <p class="price">R$7.000<span>/ano</span></p>
+            <ul>
+                <li>Suporte 24/7</li>
+            </ul>
+            <a href="#" class="pricing_button">Escolher</a>
+        </div>
+    </div>
+</div>
+
+<!-- Seção de Sobre -->
+<div id="about_section">
+    <h2>Sobre Nós</h2>
+    <div class="about_content">
+        <div class="column">
+            <h3>Por Que Escolher a Gente</h3>
+            <ul>
+                <li><strong>Facilidade e Comodidade:</strong> Solicite de casa, sem complicações.</li>
+                <li><strong>Sustentabilidade:</strong> Contribuímos para um descarte ambientalmente responsável.</li>
+                <li><strong>Conexão Eficiente:</strong> Facilitamos a logística para empresas de reciclagem.</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Como Funciona</h3>
+            <ol>
+                <li><strong>Solicite Coleta:</strong> Peça a coleta de lixo eletrônico através do nosso site ou app.</li>
+                <li><strong>Gerenciamento de Tickets:</strong> Seu pedido se transforma em um ticket, visível para empresas cadastradas.</li>
+                <li><strong>Coleta e Reciclagem:</strong> A empresa interessada assume o ticket, recolhe o lixo na sua casa e realiza a reciclagem correta.</li>
+            </ol>
+        </div>
+    </div>
+    <p>Conectamos você com empresas especializadas na coleta de lixo eletrônico de maneira rápida e sustentável.</p>
+</div>
+
+
+
+<!-- Seção de Fluxograma -->
+<div id="flowchart_section">
+    <h2>Como funciona?</h2>
+    <img src="../static/img/home/fluxograma.png" alt="Fluxograma">
+</div>
+
+
+{% endblock %}

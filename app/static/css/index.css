@@ -1,0 +1,227 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Seção de Apresentação */
+#banner {
+    height: 120vh;
+    width: 100%;
+    background: url("../img/home/banner5.png");
+    background-size: cover;
+}
+#banner h1 {
+        /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    /* background-color: #386641; */
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+}
+
+#hero_section {
+    background-color: #E3F2E1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#hero_section h1 {
+    color: #386641;
+    font-size: 2.5em;
+}
+
+#hero_images {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.hero_image {
+    width: 100px;
+    height: 100px;
+    background-color: #A7C957;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Seção de Pontos de Coleta */
+#map_section {
+    padding: 50px 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#map_section h2 {
+    color: #386641;
+    font-size: 3em;
+}
+
+#map_frame {
+    display: flex;
+    align-content: center;
+    width: 100vw;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+#map {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/* Seção de Tabela de Preços */
+#pricing_section {
+    background-color: #E3F2E1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#pricing_section h2 {
+    color: #386641;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.pricing_table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing_option {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pricing_option h3 {
+    color: #386641;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pricing_option .price {
+    font-size: 2em;
+    color: #386641;
+    margin-bottom: 10px;
+}
+
+.pricing_option .price span {
+    font-size: 0.5em;
+}
+
+.pricing_option ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.pricing_option ul li {
+    margin: 10px 0;
+    color: #333;
+}
+
+.pricing_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #A7C957;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pricing_button:hover {
+    background-color: #6C8D34;
+}
+
+/* Seção de Fluxograma */
+#flowchart_section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#flowchart_section h2 {
+    color: #386641;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#flowchart_section img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Seção de Sobre */
+#about_section {
+    background-color: #386641;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+#about_section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about_content {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about_content .column {
+    height: 50vh;
+    background-color: #477645;
+    flex: 1;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    max-width: 50%;
+}
+
+.about_content .column h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about_content .column p, .about_content .column ol, .about_content .column ul {
+    font-size: 1.1em;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.about_content .column ol, .about_content .column ul {
+    /* padding-left: 20px; */
+    list-style-type: none;
+}
+
+.about_content .column li {
+    margin-bottom: 15px;
+
+}
